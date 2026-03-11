@@ -1,6 +1,6 @@
 # Better Casino V3
 
-MelonLoader mod for Schedule 1 that overhauls The Crimson Canary casino.
+MelonLoader mod for Schedule 1 that overhauls the casino.
 
 ## Features
 
