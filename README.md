@@ -76,6 +76,24 @@ Settings are in `UserData/MelonPreferences.cfg` under `[BetterCasino]`.
 3. Launch the game — config generates on first run
 4. (Optional) Install [Mod Manager & Phone App](https://www.nexusmods.com/schedule1/mods/397) to change settings in-game
 
+## Building from Source
+
+Only the `src/` folder is included in this repo. The `libs/` folder containing MelonLoader and game assemblies is not included for obvious reasons.
+
+To build:
+
+1. Install the game and [MelonLoader](https://melonwiki.xyz/) — run the game once so MelonLoader generates its assemblies
+2. Clone this repo
+3. Create a `libs/` folder next to `src/` with the following subfolders:
+   - `libs/net6/` — Copy from `<GameDir>/MelonLoader/net6/`
+   - `libs/Il2CppAssemblies/` — Copy from `<GameDir>/MelonLoader/Il2CppAssemblies/`
+4. (Optional) If building with Mod Manager support, place the `ModManager&PhoneApp.dll` in `libs/`
+5. Open `BetterCasino.sln` and build in Release, or run:
+   ```
+   dotnet build BetterCasino.sln --configuration Release
+   ```
+6. Output DLL will be at `src/bin/Release/net6.0/BetterCasino.dll`
+
 ## Compatibility
 
 - MelonLoader (IL2CPP)
